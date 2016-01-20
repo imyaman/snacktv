@@ -1,0 +1,3 @@
+http://devcenter.kinvey.com/rest/reference/business-logic/reference.html#push-module
+
+http://www.tipsfromsiliconvalley.com/2013/07/06/create-a-service-on-android-with-phonegap-application/

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Snack TV</title>
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- Add stylesheets here. -->
+    <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">
+
+    <script src="jqueryMobile/json2.js"></script>
+    <script src="jqueryMobile/jquery-1.10.2.min.js"></script>            
+    <script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>
+    <script src="jqueryMobile/jqm.page.params.js"></script>              
+    <script src="jqueryMobile/jstorage.js"></script>
+  </head>
+  <body>
+    <!-- Add content here. -->
+    <div data-role="page">
+
+      <div data-role="header">
+<!--         <a href="#about" data-role="button" data-icon="info">About</a> -->
+        <h1>Snack TV</h1>
+<!--        <a href="#voiceRecording" data-role="button" data-icon="plus">New</a> -->
+      </div> <!-- header -->
+
+
+      <div data-role="content" id="area_c">
+        개그콘서트 시작을 알려주세요. 시작 7초 전이라고 생각 될 때 버튼을 <b>길게</b> 눌러주세요.                 
+        <button id="b1">길게 눌러주세요 ^^</button>
+      </div>
+
+
+    <button id="register">Register for Push</button>
+    <button id="unregister">Unregister from Push</button>
+    <div>Status: <span id="status">not registered.</span></div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+	    <ul>
+	    <li><a id="menu1" href="#" data-icon="grid">Programs</a></li>
+	    <li><a id="menu2" href="#" data-icon="star">Favs</a></li>
+	    <li><a id="menu3" href="#" data-icon="check">Timeline</a></li>
+	    <li><a id="menu4" href="#" data-icon="gear">Setup</a></li>
+	    </ul>
+        </div>
+      </div> <!-- footer -->
+
+
+    </div> <!-- page -->
+    <script src="cordova.js"></script>
+    <script src="PushNotification.js"></script>
+    <script src="js/kinvey-phonegap-1.1.4.min.js"></script>
+
+    <!-- Add scripts here. -->
+    <script src="js/index.js"></script>
+    <script src="js/push.js"></script>
+    <script>app.initialize();</script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#b1").bind("taphold", tapholdHandler);
+            function tapholdHandler(event) {
+              $(event.target).html("방송 시작을 알렸습니다!");
+
+            var promise = Kinvey.execute('gagconcert', {
+                name: 'Fred Jones',
+                eyes: 'Blue'
+              }, {
+                success: function(response) {
+                  }
+              }); 
+
+            }
+        });
+        $("#menu1").on('click', function() {
+            $("#area_c").html("프로그램, 채널, 주제 목록을 보여주는 화면");
+        });
+        $("#menu2").on('click', function() {
+            $("#area_c").html("내가 관심 갖고 있는 프로그램 등을 보여주는화면");
+        });
+        $("#menu3").on('click', function() {
+            $("#area_c").html("Timeline : 알림 히스토리, 글 목록");
+        });
+        $("#menu4").on('click', function() {
+            $("#area_c").html("설정 : 아이디 등록, 성별, 연령, 이용 중인 TV상품");
+        });
+    </script>
+
+  </body>
+</html>

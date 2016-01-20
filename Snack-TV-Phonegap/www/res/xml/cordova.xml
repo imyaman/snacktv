@@ -1,0 +1,2 @@
+<access origin=" https://baas.kinvey.com/*" />
+<access uri="*" subdomains="true" />

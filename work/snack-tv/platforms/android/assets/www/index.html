@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Snack TV</title>
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- Add stylesheets here. -->
+    <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">
+
+    <script src="jqueryMobile/json2.js"></script>
+    <script src="jqueryMobile/jquery-1.10.2.min.js"></script>            
+    <script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>
+    <script src="jqueryMobile/jqm.page.params.js"></script>              
+    <script src="jqueryMobile/jstorage.js"></script>
+  </head>
+  <body>
+
+    <!-- Add content here. -->
+    <div data-role="page">
+
+      <div data-role="header">
+<!--         <a href="#about" data-role="button" data-icon="info">About</a> -->
+        <h1>Snack TV</h1>
+<!--        <a href="#voiceRecording" data-role="button" data-icon="plus">New</a> -->
+      </div> <!-- header -->
+
+      <div data-role="content" id="page1">P1</div>
+      <div data-role="content" id="page2">
+        개그콘서트 시작을 알려주세요. 시작 7초 전이라고 생각 될 때 버튼을 <b>길게</b> 눌러주세요.
+        <button id="b1">길게 눌러주세요 ^^</button>
+      </div>
+      <div data-role="content" id="page3">
+
+        <a>뽀통령</a>님이 개그콘서트 시작을 알렸습니다. <br />
+        2014-07-27 21:05<br />
+        <a>개콘마왕</a>님 외 <a>234</a>명이 고마워합니다.<br />
+         <small>아, 오늘 개콘 완전 웃김 - 쉰밀애</small><br />
+         <small>다들 TV 삼매경인가봥. - 우키키</small><br />
+         <small>알림 고맙스빈다. ㅋㅋ 근데 좀 늦음 - 크레이지</small><br /><br />
+
+        <a>뽀통령</a>님이 개그콘서트 시작을 알렸습니다. <br />
+        2014-07-27 21:05<br />
+        <a>개콘마왕</a>님 외 <a>234</a>명이 고마워합니다.<br />
+         <small>아, 오늘 개콘 완전 웃김 - 쉰밀애</small><br />
+         <small>다들 TV 삼매경인가봥. - 우키키</small><br />
+         <small>알림 고맙스빈다. ㅋㅋ 근데 좀 늦음 - 크레이지</small><br /><br />
+
+        <a>뽀통령</a>님이 개그콘서트 시작을 알렸습니다. <br />
+        2014-07-27 21:05<br />
+        <a>개콘마왕</a>님 외 <a>234</a>명이 고마워합니다.<br />
+         <small>아, 오늘 개콘 완전 웃김 - 쉰밀애</small><br />
+         <small>다들 TV 삼매경인가봥. - 우키키</small><br />
+         <small>알림 고맙스빈다. ㅋㅋ 근데 좀 늦음 - 크레이지</small><br /><br />
+        
+        <input type="text" name="name" id="basic" value=""  /><a data-role="button">저장</a>
+
+</div>
+      <div data-role="content" id="page4">
+        <div data-role="fieldcontain">
+        <label for="basic">별명</label>
+        <input type="text" name="name" id="basic" value=""  />
+        <button type="submit" name="submit" value="submit">저장</button>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="flip-1">알림 받기</label>
+        <select name="flip-1" id="s_push" data-role="slider">
+          <option value="off">끔</option>
+          <option value="on" selected="selected">켬</option>
+        </select> 
+        </div>	
+
+<!--
+        <button id="register">Register for Push</button>
+        <button id="unregister">Unregister from Push</button>
+        <div>Status: <span id="status">not registered.</span></div>
+-->
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+	    <ul>
+	    <li><a id="menu1" href="#" data-icon="grid">Programs</a></li>
+	    <li><a id="menu2" href="#" data-icon="star">Favs</a></li>
+	    <li><a id="menu3" href="#" data-icon="check">Timeline</a></li>
+	    <li><a id="menu4" href="#" data-icon="gear">Setup</a></li>
+	    </ul>
+        </div>
+      </div> <!-- footer -->
+    </div> <!-- page -->
+
+    <!-- Add scripts here. -->
+    <script src="cordova.js"></script>
+    <script src="PushNotification.js"></script>
+    <script src="https://da189i1jfloii.cloudfront.net/js/kinvey-phonegap-1.1.9.min.js"></script>
+    <script src="js/push.js"></script>
+    <script src="js/index.js"></script>
+    <script>app.initialize();</script>
+    <script src="js/menu.js"></script>
+    <script src="js/page2.js"></script>
+
+    <script type="text/javascript">
+      $("#page1").show();
+      $("#page2").hide();
+      $("#page3").hide();
+      $("#page4").hide();
+    </script>
+
+  </body>
+</html>

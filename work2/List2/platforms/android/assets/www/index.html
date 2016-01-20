@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="j/jquery.mobile-1.4.5.min.css">
+        <script src="j/jquery-1.11.1.min.js"></script>
+        <script src="j/jquery.mobile-1.4.5.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <h1>List App</h1>
+            </div> <!-- end of header -->
+
+            <div data-role="main" class="ui-content">
+                <h1>PhoneGap</h1>
+                <button id="ping">Ping Kinvey</button>
+                <div id="deviceready" class="blink">
+                </div>
+            </div> <!-- end of content -->
+
+            <div data-role="footer" data-position="fixed">
+              <div data-role="navbar">
+                  <ul>
+                  <li><a id="menu1" href="#" data-icon="grid">Programs</a></li>
+                  <li><a id="menu2" href="#" data-icon="star">Favs</a></li>
+                  <li><a id="menu3" href="#" data-icon="check">Timeline</a></li>
+                  <li><a id="menu4" href="#" data-icon="gear">Setup</a></li>
+                  </ul>
+              </div>
+            </div> <!-- footer -->
+
+        </div> <!-- end of page -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="https://da189i1jfloii.cloudfront.net/js/kinvey-phonegap-1.1.9.min.js"></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/ping.js"></script>
+
+        <script type="text/javascript"> app.initialize(); </script>
+    </body>
+</html>
